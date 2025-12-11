@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Երևանի Եկեղեցիներ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef3ff;
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        header {
+            background: #3f51b5;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 26px;
+        }
+        .container {
+            width: 92%;
+            margin: auto;
+            margin-top: 20px;
+            max-width: 600px;
+        }
+        .church-card {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .church-img {
+            width: 100%;
+            max-height: 230px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .church-name {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 8px;
+            color: #3f51b5;
+        }
+        .text-block {
+            margin-top: 15px;
+            line-height: 1.6;
+            font-size: 17px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button {
+            flex: 1;
+            background: #3f51b5;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #2c3e9e;
+        }
+    </style>
+</head>
+<body>
+
+<header>Երևանի Հին Եկեղեցիները</header>
+
+<div class="container">
+
+    <div class="church-card">
+        <img src="photo_2025-12-11_22-13-02.jpg" class="church-img">
+        <div class="church-name">Սուրբ Պողոս-Պետրոս</div>
+    </div>
+
+    <div class="church-card">
+        <img src="photo_2025-12-11_22-13-03.jpg" class="church-img">
+        <div class="church-name">Սուրբ Կաթողիկե</div>
+    </div>
+
+    <div class="church-card">
+        <img src="photo_2025-12-11_22-13-04.jpg" class="church-img">
+        <div class="church-name">Սուրբ Անանիա</div>
+    </div>
+
+    <!-- Armenian Text -->
+    <p class="text-block" id="text-arm">
+        Երևանի եկեղեցիներից ամենահայտնիներն էին Սուրբ Պողոս-Պետրոսը, Սուրբ Կաթողիկեն, ինչպես նաև Սուրբ Անանիայի վանքը։
+        XVII դարում Կաթողիկոս Մելիքսեթը իր նստավայրը հաստատել էր Երևանի Սուրբ Կաթողիկե եկեղեցում։
+    </p>
+
+    <!-- English Text -->
+    <p class="text-block" id="text-eng" style="display:none;">
+        Among the most famous churches of Yerevan were St. Paul and Peter, St. Katoghike, and the Monastery of St. Anania.
+        In the 17th century, Catholicos Melikseth established his residence in the St. Katoghike Church of Yerevan.
+    </p>
+
+    <!-- Russian Text -->
+    <p class="text-block" id="text-rus" style="display:none;">
+        Среди самых известных церквей Еревана были Святые Павел и Петр, Святая Катогике и монастырь Святого Анания.
+        В XVII веке католикос Меликсет разместил свою резиденцию в ереванской церкви Катогике.
+    </p>
+
+    <div class="buttons">
+        <button onclick="showLang('arm')">Հայերեն</button>
+        <button onclick="showLang('eng')">English</button>
+        <button onclick="showLang('rus')">Русский</button>
+    </div>
+
+</div>
+
+<script>
+function showLang(lang) {
+    document.getElementById('text-arm').style.display = 'none';
+    document.getElementById('text-eng').style.display = 'none';
+    document.getElementById('text-rus').style.display = 'none';
+
+    if (lang === 'arm') document.getElementById('text-arm').style.display = 'block';
+    if (lang === 'eng') document.getElementById('text-eng').style.display = 'block';
+    if (lang === 'rus') document.getElementById('text-rus').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
+
+
